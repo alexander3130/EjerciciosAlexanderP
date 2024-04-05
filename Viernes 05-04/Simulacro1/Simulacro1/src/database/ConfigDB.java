@@ -18,9 +18,9 @@ public class ConfigDB {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             //Creamos variables con nuestras credenciales de la base de datos
-            String url = "jdbc:mysql://srv1243.hstgr.io/u942879228_riwi_book";
-            String user = "u942879228_riwi_book";
-            String password = "Apr123456*";
+            String url = "jdbc:mysql://srv1243.hstgr.io/u942879228_riwi";
+            String user = "u942879228_root";
+            String password = "Apr3130271011*";
 
             //Establezco la conexión
             objConnection = (Connection) DriverManager.getConnection(url,user,password);
