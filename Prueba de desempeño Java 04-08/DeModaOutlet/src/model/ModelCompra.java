@@ -45,7 +45,7 @@ public class ModelCompra implements CRUD {
                 Tienda objTienda = new Tienda();
                 objTienda.setId(objResult.getInt("id_tienda"));
                 objTienda.setNombre(objResult.getString("tienda.nombre"));
-                objTienda.setNombre(objResult.getString("tienda.ubicacion"));
+                objTienda.setUbicacion(objResult.getString("tienda.ubicacion"));
 
                 CompraClienteProducto objCCP = new CompraClienteProducto(objCompra, objCliente, objProducto, objTienda);
 

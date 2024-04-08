@@ -17,7 +17,7 @@ CREATE TABLE `compra`  (
   `id_compra` int NOT NULL,
   `fk_cliente` int NOT NULL,
   `fk_producto` int NOT NULL,
-  `fecha_compra` date NULL DEFAULT NULL,
+  `fecha_compra` varchar NULL DEFAULT NULL,
   `cantidad` int NULL DEFAULT NULL,
   PRIMARY KEY (`id_compra`) USING BTREE,
   INDEX `fk_cliente`(`fk_cliente` ASC) USING BTREE,

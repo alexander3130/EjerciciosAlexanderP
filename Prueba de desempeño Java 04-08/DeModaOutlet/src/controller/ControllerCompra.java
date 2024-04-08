@@ -18,7 +18,7 @@ public class ControllerCompra {
         int cantidad;
         int id_cliente = Integer.parseInt(JOptionPane.showInputDialog(ControllerCliente.listClienteString() + "\n Ingrese el cliente con quien está asociada la Compra: "));
         int id_producto = Integer.parseInt(JOptionPane.showInputDialog(ControllerProducto.listProductString() + "\n Ingrese el producto con el que está asociada la Compra: "));
-        String fecha_de_reservacion = JOptionPane.showInputDialog("Ingresa la fecha de reservacion (yyyy-MM-dd)");
+        String fecha_de_compra = JOptionPane.showInputDialog("Ingresa la fecha de compra (yyyy-MM-dd)");
         try {
             cantidad = Integer.parseInt((JOptionPane.showInputDialog("Ingrese la cantidad de productos que desea comprar")));
         } catch (NumberFormatException e) {
@@ -49,6 +49,8 @@ public class ControllerCompra {
 
         objCompra.setFk_cliente(id_cliente);
         objCompra.setFk_producto(id_producto);
+        objCompra.setCantidad(cantidad);
+        objCompra.setFecha_compra(fecha_de_compra);
         Compra objCompraString = (Compra) objModelCompra.create(objCompra);
         JOptionPane.showMessageDialog(null, "Compra guardada con exito. " + objCompraString);
     };
