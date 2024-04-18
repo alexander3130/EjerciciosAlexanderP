@@ -24,7 +24,6 @@ public class ModelReserv implements CRUD {
         String sql = "SELECT reservations.*, passengers.*, flights.* " +
                 "FROM reservations " +
                 "INNER JOIN passengers ON passengers.id_passenger = reservations.id_passenger " +
-                "INNER JOIN passengers ON passengers.id_passenger = reservations.id_passenger " +
                 "INNER JOIN flights ON flights.id_flight = reservations.id_flight";
 
         PreparedStatement objPrepare = objConnection.prepareStatement(sql);
